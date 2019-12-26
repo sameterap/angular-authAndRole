@@ -1,0 +1,15 @@
+<form #f='ngForm' (ngSubmit)="signIn(f.value)">
+  <h2>
+    SignIn
+  </h2>
+  <div *ngIf="invalidLogin">Geçersiz Kullanıcı Adı veya Şifre</div>
+  <label for="inputEmail">Email</label>
+  <br>
+  <input type="text" id="inputEmail" ngModel name="email">
+  <br>
+  <label for="inputPassword">Şifre</label>
+  <br>
+  <input type="password" id="inputPassword" ngModel name="password">
+  <br>
+  <button type="submit">Giriş Yap</button>
+</form>
